@@ -14,7 +14,8 @@ RUN \
   apt-get -y upgrade && \
   apt-get install -y build-essential && \
   apt-get install -y software-properties-common && \
-  apt-get install -y tmux curl git htop man unzip vim wget axel
+  apt-get install -y tmux curl git htop man unzip vim wget axel && \
+  curl -L http://git.io/n-install | bash
 
 # Add files.
 ADD root/.zshrc /root/.zshrc
