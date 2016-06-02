@@ -21,9 +21,7 @@ RUN \
   curl -L https://git.io/n-install | bash -s -- -y && \
 
 # Add files.
-ADD root/.zshrc /root/.zshrc
 ADD root/.bashrc /root/.bashrc
-ADD root/.gitconfig /root/.gitconfig
 ADD root/.scripts /root/.scripts
 
 # Set environment variables.
