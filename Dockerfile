@@ -28,7 +28,7 @@ RUN  git clone git://github.com/ryanb/dotfiles ~/.dotfiles && cd ~/.dotfiles && 
   git config --global github.token ""
 
 # Add files.
-ADD root/.bashrc /root/.bashrc
+ADD .bashrc /root/.bashrc
 
 # Set environment variables.
 ENV HOME /root
