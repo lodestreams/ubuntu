@@ -22,7 +22,6 @@ RUN \
 
 # Add files.
 ADD root/.bashrc /root/.bashrc
-ADD root/.scripts /root/.scripts
 
 # Set environment variables.
 ENV HOME /root
