@@ -18,7 +18,7 @@ RUN \
   apt-get update && \
   apt-get install -y build-essential && \
   apt-get install -y tmux curl git htop man unzip vim wget axel python python-dev python-pip python-virtualenv oracle-java9-installer && \
-  curl -L http://git.io/n-install | bash && \
+  curl -L https://git.io/n-install | bash -s -- -y && \
 
 # Add files.
 ADD root/.zshrc /root/.zshrc
