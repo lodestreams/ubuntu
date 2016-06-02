@@ -5,7 +5,7 @@
 #
 
 # Base image.
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 MAINTAINER Kun Ran "kun@youdar.net"
 
 # Install 
