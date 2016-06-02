@@ -8,6 +8,10 @@
 FROM ubuntu:16.04
 MAINTAINER Kun Ran "kun@youdar.net"
 
+ENV LC_ALL C.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US.UTF-8
+
 # Install 
 RUN \
   # sed -i 's%us.archive.ubuntu.com%mirrors.163.com/ubuntu%' /etc/apt/sources.list
@@ -25,7 +29,8 @@ RUN  git clone git://github.com/ryanb/dotfiles ~/.dotfiles && cd ~/.dotfiles && 
   yes | rake install && \
   git config --global user.name Youdar && \
   git config --global github.user "" && \
-  git config --global github.token ""
+  git config --global github.token "" && \
+  chsh -s $(which zsh) root
 
 # Add files.
 ADD .bashrc /root/.bashrc
@@ -36,5 +41,4 @@ ENV HOME /root
 # Define working directory.
 WORKDIR /root
 
-# Define default command.
-CMD ["zsh"]
+EXPOSE 2016
