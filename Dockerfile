@@ -20,7 +20,13 @@ RUN \
   apt-get install -y build-essential && \
   apt-get install -y tmux curl git htop man unzip vim wget axel python python-dev python-pip python-virtualenv && \
     oracle-java9-installer ruby ruby-dev ruby-bundler rake libssl-dev libyaml-dev libsqlite3-dev sqlite3 subversion&& \
-  curl -L https://git.io/n-install | bash -s -- -y && \
+  curl -L https://git.io/n-install | bash -s -- -y
+  
+RUN  git clone git://github.com/ryanb/dotfiles ~/.dotfiles && \
+  yes | rake install && \
+  git config --global user.name Youdar && \
+  git config --global github.user "" && \
+  git config --global github.token ""
 
 # Add files.
 ADD root/.bashrc /root/.bashrc
