@@ -15,7 +15,7 @@ RUN \
   apt-get -y upgrade && \
   apt-get install -y software-properties-common && \
   add-apt-repository -y ppa:webupd8team/java && \
-  echo "oracle-java9-installer shared/accepted-oracle-license-v1-1 select true" | sudo debconf-set-selections && \
+  echo "oracle-java9-installer shared/accepted-oracle-license-v1-1 select true" | debconf-set-selections && \
   apt-get update && \
   apt-get install -y build-essential && \
   apt-get install -y tmux curl git htop man unzip vim wget axel python python-dev python-pip python-virtualenv && \
